@@ -1,3 +1,17 @@
+Sobre a API
+Para emular uma API REST completa (CRUD) no backend, você deverá usar o json-server
+
+yarn global add json-server
+
+Se quiser instalar local no projeto e rodar o servidor via npm scripts, fique a vontade
+
+Rodando o json-server na raíz do projeto, ele criará um arquivo db.json
+
+O endpoint que você fará o GET, POST, PUT e DELETE será: http://localhost:5000/clientes
+
+Para rodar o servidor, use o comando:
+npm run json-server
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
