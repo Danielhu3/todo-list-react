@@ -1,6 +1,7 @@
 .BottomBar{
     padding: 1.6rem;
     background-color: var(--very-dark-desaturated-blue);
+    border-radius: 0 0 0.5rem 0.5rem;
 
     font-size: 1.5rem;
     font-weight: 400;
@@ -17,4 +18,11 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+
+.clearCompleted{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-grayish-blue);
 }

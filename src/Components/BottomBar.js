@@ -11,7 +11,7 @@ const BottomBar = () => {
         <BottomBarRadioItem label='Active' id='active'/>
         <BottomBarRadioItem label='Completed' id='completed'/>
       </div>
-      <p className={styles.clearCompleted}>Clear Completed</p>
+      <button className={styles.clearCompleted}>Clear Completed</button>
       
     </div>
   )
