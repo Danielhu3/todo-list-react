@@ -34,8 +34,7 @@ function App() {
               <BottomBar />
             </div>  
           </div>
-
-          <p className='bottom-description'>Drag and drop to reorder list</p>
+          <div className='bottom-description'>Drag and drop to reorder list</div>
       </div>
 
     </div>

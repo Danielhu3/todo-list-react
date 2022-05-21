@@ -93,6 +93,8 @@ body{
   
   display: grid;
   justify-content: center;
+  
+ 
 }
 
 .bottom-list{
@@ -116,7 +118,13 @@ body{
 }  
 
 .bottom-description{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  
   justify-self: center;
+  position: relative;
+  bottom: 8rem;
+
 }
 
