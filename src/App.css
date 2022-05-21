@@ -51,14 +51,24 @@ body{
 .top{
   width: 100vw;
   grid-area: top;
-  background: url('./images/bg-desktop-dark.jpg') no-repeat;
-  background-size:cover;
-
+  
  display: grid;
  align-items: center;
  justify-content: center;
-
  
+}
+
+.top.dark-mode{
+  background: url('./images/bg-desktop-dark.jpg') no-repeat;
+  background-size:cover;
+  
+}
+
+.top.light-mode{
+  background: url('./images/bg-desktop-light.jpg') no-repeat;
+  background-size:cover;
+  
+
 }
 
 .top-header{
@@ -74,18 +84,30 @@ body{
   letter-spacing: 1.5rem;
 }
 
-.top-header .dark-mode{
+.top-header .change-theme{
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.top-header .dark-mode::after{
-    background: url('./images/icon-sun.svg') no-repeat;
+
+.top-header .change-theme::after{
     content: "";
     display: inline-block;
     width: 26px;
     height: 26px;
 }
+
+.top-header .change-theme.dark-mode::after{
+  background: url('./images/icon-sun.svg') no-repeat;
+}
+
+.top-header .change-theme.light-mode::after{
+  background: url('./images/icon-moon.svg') no-repeat;
+}
+
+
+
+
 
 .bottom{
   grid-area: bottom;
