@@ -1,5 +1,10 @@
 .input{
     display: block;
-    padding: 1.5rem 16rem;
+    padding: 2rem 16rem;
+
+    background-color: var(--very-dark-desaturated-blue);
+    border: none;
+    border-bottom: solid 1px var(--very-dark-grayish-blue-2);
+    color: white;
     
 }

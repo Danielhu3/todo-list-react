@@ -52,7 +52,7 @@ body{
   width: 100vw;
   grid-area: top;
   background: url('./images/bg-desktop-dark.jpg') no-repeat;
-  background-size: cover;
+  background-size:cover;
 
  display: grid;
  align-items: center;
@@ -66,7 +66,7 @@ body{
   flex-direction: row;
   gap: 30rem;
   padding: 10rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .top-header .title{
@@ -97,12 +97,23 @@ body{
 
 .bottom-list{
   position: relative;
-  top: -11rem;
+  top: -13rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
- 
 }
+
+/* border on the 1st input (input to add items to todo list)*/
+.bottom-list-create input{
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/* Border on the 1st todo item*/
+.bottom-list-created input:nth-of-type(1){
+  border-radius: 0.5rem 0.5rem 0 0;
+ 
+}  
 
 .bottom-description{
   font-size: 1.6rem;
