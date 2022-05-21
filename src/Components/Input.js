@@ -1,11 +1,12 @@
 import React from 'react'
+import styles from './Input.module.css'
 
-const Input = () => {
+const Input = ({text, placeholder}) => {
   return (
-        <form>
-    <input type='text'>Input</input>
-    <button>Enviar</button>
-        </form>
+    <>
+    <input type='text' value={text} placeholder={placeholder} className={styles.input}></input>
+    </>
+        
   )
 }
 

@@ -53,9 +53,51 @@ body{
   grid-area: top;
   background: url('./images/bg-desktop-dark.jpg') no-repeat;
   background-size: cover;
+
+ display: grid;
+ align-items: center;
+ justify-content: center;
+}
+
+.top-header{
+  display: flex;
+  flex-direction: row;
+  gap: 30rem;
+  padding: 10rem;
+}
+
+.top-header .title{
+  color: white;
+  letter-spacing: 1rem;
+}
+
+.top-header .dark-mode{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.top-header .dark-mode::after{
+    background: url('./images/icon-sun.svg') no-repeat 50%;
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
 }
 
 .bottom{
   grid-area: bottom;
   background-color: var(--very-dark-blue);
+  
+  display: grid;
+  justify-content: center;
 }
+
+.bottom-list{
+  position: relative;
+  top: -5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+ 
+}
+
