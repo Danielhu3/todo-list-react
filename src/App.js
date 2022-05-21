@@ -28,9 +28,14 @@ function App() {
               <Input text='aaa'/>
               <Input text='bbb'/>
               <Input text='cc'/>
+              <Input text='aaa'/>
+              <Input text='bbb'/>
+              <Input text='cc'/>
               <BottomBar />
             </div>  
           </div>
+
+          <p className='bottom-description'>Drag and drop to reorder list</p>
       </div>
 
     </div>
