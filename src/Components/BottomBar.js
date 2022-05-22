@@ -2,16 +2,16 @@ import React from 'react'
 import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
-const BottomBar = () => {
+const BottomBar = ({darkMode}) => {
   return (
-    <div className={styles.BottomBar}>
+    <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
       <p className={styles.itemsLeft}>5 items left</p>
       <div className={styles.showItems}>
         <BottomBarRadioItem label='All' id='all'/>
         <BottomBarRadioItem label='Active' id='active'/>
         <BottomBarRadioItem label='Completed' id='completed'/>
       </div>
-      <button className={styles.clearCompleted}>Clear Completed</button>
+      <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}>Clear Completed</button>
       
     </div>
   )

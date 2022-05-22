@@ -20,7 +20,7 @@
   --very-dark-blue: hsl(235, 21%, 11%); 
   --very-dark-desaturated-blue: hsl(235, 24%, 19%);
   --light-grayish-blue2: hsl(234, 39%, 85%);
-  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --dark-grayish-blue2: hsl(234, 11%, 52%);
   --very-dark-grayish-blue: hsl(233, 14%, 35%);
   --very-dark-grayish-blue-2: hsl(237, 14%, 26%);
 
@@ -110,13 +110,11 @@ body{
   grid-area: bottom;
   display: grid;
   justify-content: center;
+  background-color: var(--very-light-gray);
 }
 
 .bottom.dark-mode{
   background-color: var(--very-dark-blue);
-}
-.bottom.light-mode{
-  background-color: var(--very-light-gray);
 }
 
 .bottom-list{
@@ -146,14 +144,12 @@ body{
   justify-self: center;
   position: relative;
   bottom: 8rem;
+
+  color: var(--dark-grayish-blue);
 }
 
 .bottom-description.dark-mode{
   color: var(--very-dark-grayish-blue);
-}
-
-.bottom-description.light-mode{
-  color: var(--dark-grayish-blue);
 }
 
 

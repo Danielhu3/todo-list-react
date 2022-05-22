@@ -4,24 +4,22 @@ import Input from './Input'
 
 
 const BottomPart = ({darkMode}) => {
+  const comments = ['aaa','bbb','ccc','ddd','5','a']
   return (
     <>
-         <div className={`bottom ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+         <div className={`bottom ${darkMode ? 'dark-mode' : ''}`}>
           <div className='bottom-list'>
             <div className='bottom-list-create'>
-              <Input placeholder='Create a new todo...'/>
+              <Input placeholder='Create a new todo...' darkMode={darkMode}/>
             </div>
             <div className='bottom-list-created'>
-              <Input text='aaa'/>
-              <Input text='bbb'/>
-              <Input text='cc'/>
-              <Input text='aaa'/>
-              <Input text='bbb'/>
-              <Input text='cc'/>
-              <BottomBar />
+              {
+                comments.map((item) => <Input text={item} darkMode={darkMode}/>)
+              }
+              <BottomBar darkMode={darkMode}/>
             </div>  
           </div>
-          <div className={`bottom-description ${darkMode ? 'dark-mode' : 'light-mode'}`}>Drag and drop to reorder list</div>
+          <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>
       </div>
     </>
   )

@@ -1,23 +1,28 @@
 .BottomBar{
     padding: 1.6rem;
-    background-color: var(--very-dark-desaturated-blue);
+    
     border-radius: 0 0 0.5rem 0.5rem;
-
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--dark-grayish-blue);
     
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
- 
+
+    background-color:  white;
+    color: var(--dark-grayish-blue);
+}
+
+.BottomBar.darkMode{
+    background-color: var(--very-dark-desaturated-blue);
+    color: var(--dark-grayish-blue2);
 }
 
 .showItems{
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    font-weight: 700;
 }
 
 .clearCompleted{
@@ -25,4 +30,8 @@
     border: none;
     cursor: pointer;
     color: var(--dark-grayish-blue);
+}
+
+.clearCompleted.darkMode{
+    color: var(--dark-grayish-blue2);
 }

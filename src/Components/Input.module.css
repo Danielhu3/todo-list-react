@@ -1,10 +1,24 @@
 .input{
     display: block;
     padding: 2rem 16rem;
-
-    background-color: var(--very-dark-desaturated-blue);
     border: none;
+    font-weight: 700;
+
+    background-color: white;
+    border-bottom: solid 1px var(--very-light-grayish-blue);
+    color: var(--very-dark-grayish-blue);
+}
+
+.input.darkMode{
+    background-color: var(--very-dark-desaturated-blue);
     border-bottom: solid 1px var(--very-dark-grayish-blue-2);
-    color: white;
-    
+    color: var(--light-grayish-blue2);
+}
+
+.input::placeholder{
+     color: var(--dark-grayish-blue); 
+}
+
+.input.darkMode::placeholder{
+    color: var(--dark-grayish-blue2);
 }
