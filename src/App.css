@@ -106,17 +106,17 @@ body{
 }
 
 
-
-
-
 .bottom{
   grid-area: bottom;
-  background-color: var(--very-dark-blue);
-  
   display: grid;
   justify-content: center;
-  
- 
+}
+
+.bottom.dark-mode{
+  background-color: var(--very-dark-blue);
+}
+.bottom.light-mode{
+  background-color: var(--very-light-gray);
 }
 
 .bottom-list{
@@ -142,11 +142,19 @@ body{
 .bottom-description{
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--very-dark-grayish-blue);
   
   justify-self: center;
   position: relative;
   bottom: 8rem;
-
 }
+
+.bottom-description.dark-mode{
+  color: var(--very-dark-grayish-blue);
+}
+
+.bottom-description.light-mode{
+  color: var(--dark-grayish-blue);
+}
+
+
 

@@ -3,10 +3,10 @@ import BottomBar from './BottomBar'
 import Input from './Input'
 
 
-const BottomPart = () => {
+const BottomPart = ({darkMode}) => {
   return (
     <>
-         <div className='bottom'>
+         <div className={`bottom ${darkMode ? 'dark-mode' : 'light-mode'}`}>
           <div className='bottom-list'>
             <div className='bottom-list-create'>
               <Input placeholder='Create a new todo...'/>
@@ -21,7 +21,7 @@ const BottomPart = () => {
               <BottomBar />
             </div>  
           </div>
-          <div className='bottom-description'>Drag and drop to reorder list</div>
+          <div className={`bottom-description ${darkMode ? 'dark-mode' : 'light-mode'}`}>Drag and drop to reorder list</div>
       </div>
     </>
   )

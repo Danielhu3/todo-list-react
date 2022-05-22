@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <TopPart darkMode={darkMode} setDarkMode={setDarkMode}/> 
-      <BottomPart />
+      <BottomPart darkMode={darkMode}/>
     </div>
   );
 }
