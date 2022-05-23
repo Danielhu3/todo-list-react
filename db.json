@@ -4,6 +4,11 @@
       "id": 1,
       "text": "Give this project a star in GitHub :)",
       "done": false
+    },
+    {
+      "id" : 2,
+      "text": "Get some rest",
+      "done":false
     }
   ]
   

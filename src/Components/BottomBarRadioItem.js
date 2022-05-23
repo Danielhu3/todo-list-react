@@ -4,7 +4,7 @@ const BottomBarRadioItem = ({label, id}) => {
   return (
     <>
         <input type="radio" name="radio-input" id={id} value={id} className={styles.input} />
-        <label for={id} className={styles.label}>{label}</label>
+        <label htmlFor={id} className={styles.label}>{label}</label>
     </>
   )
 }

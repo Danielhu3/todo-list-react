@@ -14,7 +14,7 @@ const BottomPart = ({darkMode}) => {
             </div>
             <div className='bottom-list-created'>
               {
-                comments.map((item) => <Input text={item} darkMode={darkMode}/>)
+                comments.map((item) => <Input text={item} key={item} darkMode={darkMode}/>)
               }
               <BottomBar darkMode={darkMode}/>
             </div>  
