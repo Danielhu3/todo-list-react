@@ -1,8 +1,10 @@
 .input{
     display: block;
-    padding: 2rem 16rem;
+    padding: 2rem 30rem 2rem 2rem;
     border: none;
     font-weight: 700;
+    
+    
 
     background-color: white;
     border-bottom: solid 1px var(--very-light-grayish-blue);
