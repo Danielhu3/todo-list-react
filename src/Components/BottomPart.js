@@ -1,5 +1,5 @@
 import React from 'react'
-import { ALL_GET } from '../Api'
+import { ALL_GET, ITEM_POST } from '../Api'
 import useFetch from '../Hooks/useFetch'
 import BottomBar from './BottomBar'
 import Input from './Input'
@@ -12,12 +12,14 @@ const BottomPart = ({darkMode}) => {
     async function fetchList(){
       const {url, options} = ALL_GET()
       const {response, json} = await request(url, options)
-      console.log(response)
-      console.log(json)
     }
     
     fetchList()
   },[request])
+
+
+  
+  
  
 
   return (
@@ -25,7 +27,7 @@ const BottomPart = ({darkMode}) => {
          <div className={`bottom ${darkMode ? 'dark-mode' : ''}`}>
           <div className='bottom-list'>
             <div className='bottom-list-create'>
-              <Input placeholder='Create a new todo...' darkMode={darkMode}/>
+              <Input placeholder='Create a new todo...' darkMode={darkMode} AddItem={true}/>
             </div>
             <div className='bottom-list-created'>
               {
