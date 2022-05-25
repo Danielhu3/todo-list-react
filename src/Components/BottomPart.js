@@ -13,7 +13,7 @@ const BottomPart = ({darkMode, data, setData}) => {
             </div>
             <div className='bottom-list-created'>
               {
-                data ? data.map((item) => <Input text={item.text} key={item.id} darkMode={darkMode}/>)
+                data ? data.map((item) => <Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/>)
                 : null
               }
               <BottomBar darkMode={darkMode}/>

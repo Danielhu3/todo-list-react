@@ -22,3 +22,17 @@ export function ITEM_POST(body){
         }
     }
 }
+
+export function ITEM_PUT(body, id){
+    return {
+        url: `${url}/${id}`,
+        options:{
+            method: 'PUT',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }
+    }
+}
+

@@ -18,6 +18,7 @@ function App() {
     }
     fetchList()
   },[request])
+  
   return (
     <div className="App">
       <TopPart darkMode={darkMode} setDarkMode={setDarkMode}/> 
