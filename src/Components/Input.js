@@ -22,6 +22,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
     }
     fetch()
     event.target.blur()
+    setValue('')
   } 
 
   function todoEdit(event){
