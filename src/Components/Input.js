@@ -3,8 +3,8 @@ import { ITEM_POST } from '../Api'
 import useFetch from '../Hooks/useFetch'
 import styles from './Input.module.css'
 
-const Input = ({text, placeholder, darkMode, AddItem}) => {
-  const {data, request} = useFetch()
+const Input = ({text, placeholder, darkMode, AddItem, setData}) => {
+  const {request} = useFetch()
   
    function todoFetch(event){
     async function fetch(){
@@ -14,7 +14,8 @@ const Input = ({text, placeholder, darkMode, AddItem}) => {
         done: false
       })
       const {json} = await request(url,options)
-      console.log(json)
+      setData((data) => [...data, json])
+
     }
     fetch()
   } 
