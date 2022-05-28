@@ -16,7 +16,7 @@ const BottomPart = ({darkMode, data, setData}) => {
                 data ? data.map((item) => <Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/>)
                 : null
               }
-              <BottomBar darkMode={darkMode}/>
+              <BottomBar darkMode={darkMode} data={data}/>
             </div>  
           </div>
           <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>
