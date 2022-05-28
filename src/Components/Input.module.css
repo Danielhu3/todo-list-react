@@ -1,6 +1,6 @@
 .input{
     display: block;
-    padding: 2rem 0;
+    padding: 2rem 0 2rem 2rem;
     width: 50rem;
     border: none;
     font-weight: 700;
@@ -11,6 +11,9 @@
     color: var(--very-dark-grayish-blue);
 }
 
+.input:focus{
+    outline: none;
+}
 .input.darkMode{
     background-color: var(--very-dark-desaturated-blue);
     border-bottom: solid 1px var(--very-dark-grayish-blue-2);
