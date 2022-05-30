@@ -8,6 +8,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
   
 
   const {request} = useFetch()
+  
    function todoPost(event){
     async function fetch(){
       const {url, options} = ITEM_POST({
@@ -20,9 +21,13 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
       setData((data) => [...data, json])
 
     }
-    fetch()
-    event.target.blur()
-    setValue('')
+
+    if(event.target.value !== ''){
+      fetch()
+      event.target.blur()
+      setValue('')
+    }
+    
   } 
 
   function todoEdit(event){
@@ -36,8 +41,12 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
       await request(url, options)
       
     }
-    fetch()
-    event.target.blur()
+    
+    if(event.target.value !== ''){
+      fetch()
+      event.target.blur()
+    }
+    
 
   }
   return (
