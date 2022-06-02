@@ -1,11 +1,11 @@
 .input{
-    
+    display: none;
 }
 
 .label{
     cursor: pointer;
 }
 
-.input:active{
-    font-size: 2rem;
+.input:checked + label{
+    color: var(--bright-blue)
 }

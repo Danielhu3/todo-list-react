@@ -6,7 +6,7 @@ const BottomBar = ({darkMode, data}) => {
   const [radio, setRadio] = React.useState('')
 
   React.useEffect(()=>{
-    console.log(radio)
+    if(radio) console.log(radio)
   },[radio])
   
   return (
