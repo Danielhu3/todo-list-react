@@ -1,6 +1,6 @@
 .input{
     display: block;
-    padding: 2rem 0 2rem 2rem;
+    padding: 2rem 0 2rem 4rem;
     width: 50rem;
     border: none;
     font-weight: 700;
@@ -25,4 +25,10 @@
 
 .input.darkMode::placeholder{
     color: var(--dark-grayish-blue2);
+}
+
+.checkbox{
+    position:absolute;
+    left: 1rem;;
+    top:2rem;
 }

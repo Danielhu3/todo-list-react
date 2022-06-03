@@ -11,13 +11,15 @@ const BottomPart = ({darkMode, data, setData}) => {
             <div className='bottom-list-create'>
               <Input placeholder='Create a new todo...' darkMode={darkMode} AddItem={true} setData={setData}/>
             </div>
-            <div className='bottom-list-created'>
+            <ul className='bottom-list-created'>
               {
-                data ? data.map((item) => <Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/>)
+                data ? data.map((item) => 
+                <li><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
+                )
                 : null
               }
               <BottomBar darkMode={darkMode} data={data}/>
-            </div>  
+            </ul>  
           </div>
           <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>
       </div>
