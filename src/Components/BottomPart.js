@@ -14,7 +14,7 @@ const BottomPart = ({darkMode, data, setData}) => {
             <ul className='bottom-list-created'>
               {
                 data ? data.map((item) => 
-                <li><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
+                <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
                 )
                 : null
               }

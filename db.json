@@ -7,13 +7,13 @@
     },
     {
       "id": 2,
-      "text": "ssdsf",
-      "done": false
+      "text": "sdsd",
+      "done": true
     },
     {
       "id": 3,
       "text": "teste",
-      "done": true
+      "done": false
     },
     {
       "id": 4,
@@ -23,7 +23,7 @@
     {
       "id": 5,
       "text": "as",
-      "done": false
+      "done": true
     }
   ]
 }

@@ -36,3 +36,16 @@ export function ITEM_PUT(body, id){
     }
 }
 
+export function DONE_PUT(body, id){
+    return {
+        url: `${url}/${id}`,
+        options:{
+            method: 'PUT',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }
+    }
+}
+

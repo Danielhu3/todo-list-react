@@ -1,11 +1,11 @@
 import React from 'react'
-import { ITEM_POST, ITEM_PUT } from '../Api'
+import { ITEM_POST, ITEM_PUT, DONE_PUT } from '../Api'
 import useFetch from '../Hooks/useFetch'
 import styles from './Input.module.css'
 
 const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
   const [value, setValue] = React.useState(text)
-  
+  const [checked, setChecked] = React.useState(done)
 
   const {request} = useFetch()
   
@@ -50,10 +50,29 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
 
   }
 
+  function setDone(){
+    console.log(id)
+
+    async function fetch(){
+      const {url, options} = DONE_PUT({
+        id:id,
+        text:text,
+        done: !done
+      }, id)
+
+      await request(url, options)
+      setChecked(!done)
+    }
+
+    fetch()
+  }
+
+
+
   return (
   <>
   {
-     <input type='checkbox' className={styles.checkbox} checked={done}></input>
+     <input type='checkbox' className={styles.checkbox} checked={checked} onChange={setDone}></input>
   }
      
 
