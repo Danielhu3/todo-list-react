@@ -1,6 +1,6 @@
 import React from 'react'
-import { ITEM_POST, ITEM_PUT, DONE_PUT } from '../Api'
-import useFetch from '../Hooks/useFetch'
+import { ITEM_POST, ITEM_PUT, DONE_PUT } from '../../Api'
+import useFetch from '../../Hooks/useFetch'
 import styles from './Input.module.css'
 
 const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
@@ -35,7 +35,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
       const {url,options} = ITEM_PUT({
         id: id,
         text: event.target.value,
-        done:done
+        done: done
       }, id)
 
       await request(url, options)
@@ -51,17 +51,19 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
   }
 
   function setDone(){
-    console.log(id)
+    const newDone = !checked
 
     async function fetch(){
-      const {url, options} = DONE_PUT({
+      const {url, options} =  DONE_PUT({
         id:id,
         text:text,
-        done: !done
+        done: newDone
       }, id)
 
+      console.log(url, options)
+
       await request(url, options)
-      setChecked(!done)
+      setChecked(newDone)
     }
 
     fetch()

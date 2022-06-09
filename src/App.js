@@ -1,5 +1,5 @@
 import './App.css';
-import BottomPart from './Components/BottomPart';
+import BottomPart from './Components/BottomPart/BottomPart';
 import TopPart from './Components/TopPart';
 import React from 'react';
 import useFetch from './Hooks/useFetch';
