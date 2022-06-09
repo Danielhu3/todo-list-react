@@ -4,6 +4,7 @@ import Input from './Input'
 
 
 const BottomPart = ({darkMode, data, setData}) => {
+  const [radio, setRadio] = React.useState('all')
   return (
     <>
          <div className={`bottom ${darkMode ? 'dark-mode' : ''}`}>
@@ -18,7 +19,7 @@ const BottomPart = ({darkMode, data, setData}) => {
                 )
                 : null
               }
-              <BottomBar darkMode={darkMode} data={data}/>
+              <BottomBar darkMode={darkMode} data={data} radio={radio} setRadio={setRadio}/>
             </ul>  
           </div>
           <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>

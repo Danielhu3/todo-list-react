@@ -8,7 +8,7 @@
     {
       "id": 2,
       "text": "sdsd",
-      "done": true
+      "done": false
     },
     {
       "id": 3,
@@ -23,6 +23,11 @@
     {
       "id": 5,
       "text": "as",
+      "done": true
+    },
+    {
+      "id": 6,
+      "text": "ass",
       "done": true
     }
   ]
