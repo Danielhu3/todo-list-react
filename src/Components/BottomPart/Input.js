@@ -11,6 +11,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
   
    function todoPost(event){
     async function fetch(){
+      console.log(event)
       const {url, options} = ITEM_POST({
         id: null,
         text : event.target.value,

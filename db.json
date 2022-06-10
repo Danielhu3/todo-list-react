@@ -3,7 +3,7 @@
     {
       "id": 1,
       "text": "Give this project a star in GitHub :)",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
@@ -23,11 +23,26 @@
     {
       "id": 5,
       "text": "as",
-      "done": false
+      "done": true
     },
     {
       "id": 6,
       "text": "ass",
+      "done": true
+    },
+    {
+      "id": 7,
+      "text": "teste",
+      "done": false
+    },
+    {
+      "id": 8,
+      "text": "sssds",
+      "done": false
+    },
+    {
+      "id": 9,
+      "text": "sd",
       "done": false
     }
   ]

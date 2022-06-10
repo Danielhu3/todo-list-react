@@ -17,7 +17,8 @@ function App() {
       setData(json)
     }
     fetchList()
-  },[request])
+    // data is needeed to when an item is checked or unchecked it will refresh list
+  },[request, data])
   
   return (
     <div className="App">
