@@ -1,13 +1,28 @@
 import React from 'react'
+import { ITEM_DELETE } from '../../Api'
+import useFetch from '../../Hooks/useFetch'
 import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
 const BottomBar = ({darkMode, data, radio, setRadio}) => {
+ 
+  //const {request} = useFetch()
   
+  function clearCompleted(){
+    /*
+    async function fetch(id){
+      const {url, options} = ITEM_DELETE(id)
+      const {response, json} = await request(url,options)
+      console.log(response)
+      console.log(json)
 
-  React.useEffect(()=>{
-    if(radio) console.log(radio)
-  },[radio])
+    }
+    
+
+    data.filter((item) => item.done ? fetch(item.id) : null)
+    */
+  }
+
   
   return (
     <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
@@ -17,7 +32,8 @@ const BottomBar = ({darkMode, data, radio, setRadio}) => {
         <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
         <BottomBarRadioItem label='Completed' id='completed' setRadio={setRadio} radio={radio}/>
       </div>
-      <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}>Clear Completed</button>
+      <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}
+      onClick={clearCompleted}>Clear Completed</button>
       
     </div>
   )

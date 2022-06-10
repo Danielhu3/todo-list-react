@@ -3,7 +3,7 @@ import { ITEM_POST, ITEM_PUT, DONE_PUT } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import styles from './Input.module.css'
 
-const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
+const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setDataRefresh}) => {
   const [value, setValue] = React.useState(text)
   const [checked, setChecked] = React.useState(done)
 
@@ -11,7 +11,6 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
   
    function todoPost(event){
     async function fetch(){
-      console.log(event)
       const {url, options} = ITEM_POST({
         id: null,
         text : event.target.value,
@@ -61,10 +60,11 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
         done: newDone
       }, id)
 
-      console.log(url, options)
+      
 
       await request(url, options)
       setChecked(newDone)
+      setDataRefresh((data)=> !data)
     }
 
     fetch()
@@ -74,12 +74,9 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData}) => {
 
   return (
   <>
-  {
+  
      <input type='checkbox' className={styles.checkbox} checked={checked} onChange={setDone}></input>
-  }
-     
-
-     
+  
    <input type='text' placeholder={placeholder}
   value={value} onChange={(event)=> setValue(event.target.value)}
 

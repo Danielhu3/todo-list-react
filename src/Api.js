@@ -49,3 +49,16 @@ export function DONE_PUT(body, id){
     }
 }
 
+/*
+export function ITEM_DELETE(id){
+    return {
+        url: `${url}/${id}`,
+        options:{
+            method: 'DELETE',        
+        }
+    }
+}
+*/
+
+
+

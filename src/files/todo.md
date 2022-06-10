@@ -5,3 +5,7 @@
 # save in localstore what theme put
 
 # prevent add todo items if input is empty
+
+# add 'x' to delete item on input
+
+# fazer um overflow nos items para ter um limite de tamanho

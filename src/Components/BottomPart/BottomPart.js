@@ -3,7 +3,7 @@ import BottomBar from './BottomBar'
 import Input from './Input'
 
 
-const BottomPart = ({darkMode, data, setData}) => {
+const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
   const [radio, setRadio] = React.useState('all')
   return (
     <>
@@ -17,7 +17,8 @@ const BottomPart = ({darkMode, data, setData}) => {
               
               radio === 'all' ?  
               data ? data.map((item) => 
-              <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
+              <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}
+              setDataRefresh={setDataRefresh}/></li>
               )
               : null
               :
@@ -25,14 +26,16 @@ const BottomPart = ({darkMode, data, setData}) => {
               radio === 'active' ? 
               data ? data.map((item) => 
               item.done ? null
-              : <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
+              : <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}
+              setDataRefresh={setDataRefresh}/></li>
               )
               : null
               :
 
               radio === 'completed' ? 
               data ? data.map((item) => 
-              item.done ? <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}/></li>
+              item.done ? <li key={item.id}><Input text={item.text} key={item.id} id={item.id} done={item.done}darkMode={darkMode}
+              setDataRefresh={setDataRefresh}/></li>
               : null
               )
               : null
