@@ -23,7 +23,6 @@ function App() {
     // dataRefresh is needeed to when an item is checked or unchecked it will refresh list
   },[request, dataRefresh])
 
-  console.log(dataRefresh)
   
   return (
     <div className="App">

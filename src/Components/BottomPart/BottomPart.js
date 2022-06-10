@@ -48,7 +48,7 @@ const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
              
                 
               
-              <BottomBar darkMode={darkMode} data={data} radio={radio} setRadio={setRadio}/>
+              <BottomBar darkMode={darkMode} data={data} radio={radio} setRadio={setRadio} setDataRefresh={setDataRefresh}/>
             </ul>  
           </div>
           <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>

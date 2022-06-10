@@ -4,23 +4,26 @@ import useFetch from '../../Hooks/useFetch'
 import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
-const BottomBar = ({darkMode, data, radio, setRadio}) => {
+const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
  
-  //const {request} = useFetch()
+  const {request} = useFetch()
   
   function clearCompleted(){
-    /*
+    
     async function fetch(id){
       const {url, options} = ITEM_DELETE(id)
-      const {response, json} = await request(url,options)
-      console.log(response)
-      console.log(json)
+      
+      const {response} = await request(url,options)
+      if(response.ok) setDataRefresh((data)=> !data)
+      
+      
 
     }
     
 
     data.filter((item) => item.done ? fetch(item.id) : null)
-    */
+    
+    
   }
 
   

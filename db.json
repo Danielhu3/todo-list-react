@@ -3,12 +3,12 @@
     {
       "id": 1,
       "text": "Give this project a star in GitHub :)",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
       "text": "sdsd",
-      "done": true
+      "done": false
     }
   ]
 }
