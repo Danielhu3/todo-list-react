@@ -10,7 +10,7 @@ const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
          <div className={`bottom ${darkMode ? 'dark-mode' : ''}`}>
           <div className='bottom-list'>
             <div className='bottom-list-create'>
-              <Input placeholder='Create a new todo...' darkMode={darkMode} AddItem={true} setData={setData}/>
+              <Input placeholder='Create a new todo...' darkMode={darkMode} AddItem={true} setData={setData} />
             </div>
             <ul className='bottom-list-created'>
               { 
