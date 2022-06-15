@@ -46,10 +46,22 @@
     background-image: url('../../images/icon-cross.svg');
     border: none;
 
-    display: none;
+    opacity: 0;
+    
+
+   
 }
 
 .input:focus + .close, .input:hover + .close,
 .close:hover, .close:focus{
-    display: block;
+    animation: close 1.5s ease-in-out forwards;
+}
+
+@keyframes close{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
