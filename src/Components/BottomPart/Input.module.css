@@ -32,3 +32,24 @@
     left: 1rem;;
     top:2rem;
 }
+
+.close{
+    cursor: pointer;
+
+    background-color: transparent;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    width: 18px;
+    height: 18px;
+
+    background-image: url('../../images/icon-cross.svg');
+    border: none;
+
+    display: none;
+}
+
+.input:focus + .close, .input:hover + .close,
+.close:hover, .close:focus{
+    display: block;
+}

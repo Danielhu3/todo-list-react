@@ -77,14 +77,15 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
   
      <input type='checkbox' className={styles.checkbox} checked={checked} onChange={setDone}></input>
   
-   <input type='text' placeholder={placeholder}
-    value={value ? value : ''} onChange={(event)=> setValue(event.target.value)}
+    <input type='text' placeholder={placeholder}
+      value={value ? value : ''} onChange={(event)=> setValue(event.target.value)}
 
-  onKeyDown ={(event) => AddItem ? event.key === 'Enter' ? todoPost(event) : null
-  : event.key === 'Enter' ? todoEdit(event) : null}
+      onKeyDown ={(event) => AddItem ? event.key === 'Enter' ? todoPost(event) : null
+      : event.key === 'Enter' ? todoEdit(event) : null}
 
-  className={`${styles.input} ${darkMode ? styles.darkMode : ''}`}>
+      className={`${styles.input} ${darkMode ? styles.darkMode : ''}`}>
     </input> 
+    <button className={styles.close}></button>
   </>
    
    

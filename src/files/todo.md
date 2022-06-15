@@ -10,4 +10,8 @@
 
 # fazer um overflow nos items para ter um limite de tamanho
 
-# check input(that adds item) error on typping
+# Mobile version
+
+# check input(that adds item) error on typping (x)
+
+# fix active items count
