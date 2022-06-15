@@ -1,5 +1,5 @@
 import React from 'react'
-import { ITEM_POST, ITEM_PUT, DONE_PUT } from '../../Api'
+import { ITEM_POST, ITEM_PUT, DONE_PUT, ITEM_DELETE } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import styles from './Input.module.css'
 
@@ -50,6 +50,18 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
 
   }
 
+  function todoDelete(event){
+    async function fetch(){
+      const {url, options} = ITEM_DELETE(id)
+      const {response} = await request (url, options)
+
+      if(response.ok) setDataRefresh((data)=> !data)
+    }
+    fetch()
+    
+
+  }
+
   function setDone(){
     const newDone = !checked
 
@@ -70,6 +82,8 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
     fetch()
   }
 
+  
+
 
 
   return (
@@ -85,7 +99,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
 
       className={`${styles.input} ${darkMode ? styles.darkMode : ''}`}>
     </input> 
-    <button className={styles.close}></button>
+    <button className={styles.close} onClick={todoDelete}></button>
   </>
    
    
