@@ -5,7 +5,17 @@ import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
 const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
- 
+
+  const [itemsLeft, setItemsLeft] = React.useState(0)
+
+  React.useEffect(()=>{
+    setItemsLeft(0)
+    data && data.map((item) => item.done ? null : setItemsLeft((actual) => actual + 1))
+    console.log(itemsLeft)
+    
+  }, [data, itemsLeft])
+
+
   const {request} = useFetch()
   
   function clearCompleted(){
@@ -29,7 +39,7 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
   
   return (
     <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
-      <p className={styles.itemsLeft}>{data && data.length} item(s) left</p>
+      <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
       <div className={styles.showItems}>
         <BottomBarRadioItem label='All' id='all' setRadio={setRadio} radio={radio}/>
         <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
