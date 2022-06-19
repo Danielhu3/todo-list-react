@@ -23,6 +23,19 @@ function App() {
     // dataRefresh is needeed to when an item is checked or unchecked it will refresh list
   },[request, dataRefresh])
 
+  // get theme from localstorage
+  React.useEffect(()=>{
+    const theme = localStorage.getItem('theme')
+
+    if(theme === 'light'){
+      setDarkMode(false)
+    }
+    if(theme === 'dark'){
+      setDarkMode(true)
+
+    }
+  },[darkMode])
+
   
   return (
     <div className="App">

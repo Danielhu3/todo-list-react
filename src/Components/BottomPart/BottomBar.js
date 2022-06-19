@@ -5,6 +5,8 @@ import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
 const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
+  
+  
 
   const [itemsLeft, setItemsLeft] = React.useState(0)
 
