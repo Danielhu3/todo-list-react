@@ -134,7 +134,7 @@ body{
 }
 
 /* Border on the 1st todo item*/
-.bottom-list-created input:nth-of-type(1){
+.bottom-list-created input:nth-of-type(2){
   border-radius: 0.5rem 0.5rem 0 0;
   
 }  
@@ -158,6 +158,8 @@ li{
 .bottom-description.dark-mode{
   color: var(--very-dark-grayish-blue);
 }
+
+
 
 
 

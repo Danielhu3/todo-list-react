@@ -10,6 +10,16 @@
     color: var(--very-dark-grayish-blue);
 }
 
+.input.checked{
+    text-decoration: line-through;
+    color: var(--very-light-grayish-blue);
+    
+}
+
+.input.checked.darkMode{
+    color: var(--very-dark-grayish-blue)
+}
+
 .input:focus{
     outline: none;
 }
@@ -29,9 +39,37 @@
 
 .checkbox{
     position:absolute;
-    left: 1rem;;
-    top:2rem;
+    left: 1rem;
+    top: 2rem;
+    cursor: pointer;
+
+    
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    vertical-align: middle;
+    appearance: none;
+    outline: none;
+    background-color: transparent;   
+    border: 1px solid var(--very-light-grayish-blue);  
+
+    
 }
+
+.checkbox.darkMode{
+    border: 1px solid var(--very-dark-grayish-blue-2);
+}
+
+
+
+.checkbox:checked{
+   
+    background: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) ;
+    
+    
+    
+}
+
 
 .close{
     cursor: pointer;

@@ -11,7 +11,6 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
   React.useEffect(()=>{
     setItemsLeft(0)
     data && data.map((item) => item.done ? null : setItemsLeft((actual) => actual + 1))
-    console.log(itemsLeft)
     
   }, [data, itemsLeft])
 

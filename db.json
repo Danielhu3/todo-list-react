@@ -3,17 +3,12 @@
     {
       "id": 1,
       "text": "sdsad",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
       "text": "sdas",
       "done": true
-    },
-    {
-      "id": 3,
-      "text": "sdsd",
-      "done": false
     }
   ]
 }
