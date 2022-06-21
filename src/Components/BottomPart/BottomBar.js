@@ -2,7 +2,7 @@ import React from 'react'
 import { ITEM_DELETE } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import styles from './BottomBar.module.css'
-import BottomBarRadioItem from './BottomBarRadioItem'
+import BottomBarDiv from './BottomBarDiv'
 
 const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
   const [itemsLeft, setItemsLeft] = React.useState(0)
@@ -58,7 +58,7 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
   window.matchMedia("(max-width: 560px)").addEventListener('change', checkWindowSize);
 
   
-  return (
+  /*return (
     <>
     <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
       <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
@@ -81,6 +81,23 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
         </div>
        
       
+      }
+    </>
+  ) */
+
+  return (
+    <>
+      <BottomBarDiv darkMode={darkMode} setRadio={setRadio} radio={radio}>
+      <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
+      <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}
+      onClick={clearCompleted}>Clear Completed</button>
+
+      </BottomBarDiv>
+
+      {  
+        isMobile &&
+        <BottomBarDiv darkMode={darkMode} setRadio={setRadio} radio={radio} />    
+        
       }
     </>
   )
