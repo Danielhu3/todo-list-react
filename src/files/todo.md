@@ -10,9 +10,13 @@
 
 # fix active items count (x)
 
+# save in localstore what theme put (x)
+
 # fazer um overflow nos items para ter um limite de tamanho
 
 # Mobile version
 
-# save in localstore what theme put
+# Drag and drop
+
+
 

@@ -35,3 +35,13 @@
 .clearCompleted.darkMode{
     color: var(--dark-grayish-blue2);
 }
+
+/* mobile */
+
+@media only screen and (max-width: 560px){
+
+    .showItems{
+        display: none;
+    }
+}
+    

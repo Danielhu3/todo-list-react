@@ -64,7 +64,8 @@
 
 .checkbox:checked{
    
-    background: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) ;
+    background :no-repeat url('../../images/icon-check.svg') center,
+    linear-gradient(to bottom,  hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     
     
     
