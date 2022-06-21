@@ -5,10 +5,9 @@ import styles from './BottomBar.module.css'
 import BottomBarRadioItem from './BottomBarRadioItem'
 
 const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
-  
-  
-
   const [itemsLeft, setItemsLeft] = React.useState(0)
+
+  const [isMobile, setIsMobile] = React.useState(false)
 
   React.useEffect(()=>{
     setItemsLeft(0)
@@ -36,9 +35,31 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
     
     
   }
+  
+  
+  React.useState(()=>{
+    checkWindowSize()
+  },[])
+
+  function checkWindowSize(){
+  
+    const checkMedia = window.matchMedia("(max-width: 560px)")
+    
+    if(checkMedia.matches){
+      setIsMobile(true)
+    } 
+    else {
+      setIsMobile(false)
+    }
+
+   
+  }
+
+  window.matchMedia("(max-width: 560px)").addEventListener('change', checkWindowSize);
 
   
   return (
+    <>
     <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
       <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
       <div className={styles.showItems}>
@@ -48,8 +69,20 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
       </div>
       <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}
       onClick={clearCompleted}>Clear Completed</button>
-      
     </div>
+
+    { isMobile && 
+        <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
+           <div className={styles.showItems}>
+            <BottomBarRadioItem label='All' id='all' setRadio={setRadio} radio={radio}/>
+            <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
+            <BottomBarRadioItem label='Completed' id='completed' setRadio={setRadio} radio={radio}/>
+          </div>
+        </div>
+       
+      
+      }
+    </>
   )
 }
 

@@ -16,7 +16,13 @@
 
 # Mobile version
 
+# Criar um componente pro showItems
+
+# Criar um componente pra div do BottomBar???
+
 # Drag and drop
+
+
 
 
 
