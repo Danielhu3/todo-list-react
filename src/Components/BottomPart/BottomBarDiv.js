@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './BottomBarDiv.module.css'
-import BottomBarRadioItem from './BottomBarRadioItem'
+import BottomRadioItems from './BottomRadioItems'
 
 const BottomBarDiv = ({darkMode, setRadio, radio, children}) => {
   return (
@@ -8,9 +8,7 @@ const BottomBarDiv = ({darkMode, setRadio, radio, children}) => {
         {children && children[0]}
 
         <div className={styles.showItems}>
-            <BottomBarRadioItem label='All' id='all' setRadio={setRadio} radio={radio}/>
-            <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
-            <BottomBarRadioItem label='Completed' id='completed' setRadio={setRadio} radio={radio}/>
+            <BottomRadioItems setRadio={setRadio} radio={radio}> </BottomRadioItems>
         </div>
 
         {children && children[1]}

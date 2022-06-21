@@ -57,34 +57,6 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
 
   window.matchMedia("(max-width: 560px)").addEventListener('change', checkWindowSize);
 
-  
-  /*return (
-    <>
-    <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
-      <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
-      <div className={styles.showItems}>
-        <BottomBarRadioItem label='All' id='all' setRadio={setRadio} radio={radio}/>
-        <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
-        <BottomBarRadioItem label='Completed' id='completed' setRadio={setRadio} radio={radio}/>
-      </div>
-      <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}
-      onClick={clearCompleted}>Clear Completed</button>
-    </div>
-
-    { isMobile && 
-        <div className={`${styles.BottomBar} ${darkMode ? styles.darkMode : ''}`}>
-           <div className={styles.showItems}>
-            <BottomBarRadioItem label='All' id='all' setRadio={setRadio} radio={radio}/>
-            <BottomBarRadioItem label='Active' id='active' setRadio={setRadio} radio={radio}/>
-            <BottomBarRadioItem label='Completed' id='completed' setRadio={setRadio} radio={radio}/>
-          </div>
-        </div>
-       
-      
-      }
-    </>
-  ) */
-
   return (
     <>
       <BottomBarDiv darkMode={darkMode} setRadio={setRadio} radio={radio}>
