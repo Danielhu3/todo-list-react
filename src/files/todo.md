@@ -12,15 +12,17 @@
 
 # save in localstore what theme put (x)
 
-# fazer um overflow nos items para ter um limite de tamanho
+# Criar um componente pro showItems (x)
+
+# Criar um componente pra div do BottomBar??? (X)
 
 # Mobile version
 
-# Criar um componente pro showItems
-
-# Criar um componente pra div do BottomBar???
+# fazer um overflow nos items para ter um limite de tamanho
 
 # Drag and drop
+
+
 
 
 

@@ -59,7 +59,7 @@ const BottomBar = ({darkMode, data, radio, setRadio, setDataRefresh}) => {
 
   return (
     <>
-      <BottomBarDiv darkMode={darkMode} setRadio={setRadio} radio={radio}>
+      <BottomBarDiv darkMode={darkMode} setRadio={setRadio} radio={radio} isMobile={isMobile}>
       <p className={styles.itemsLeft}>{itemsLeft} item(s) left</p>
       <button className={`${styles.clearCompleted} ${darkMode ? styles.darkMode : ''}`}
       onClick={clearCompleted}>Clear Completed</button>

@@ -42,16 +42,21 @@ body{
  
 
 .App{
+  
   height: 100vh;
   
   display: grid;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: "top"
                         "bottom";
+                        
+
+  
 }
 
+
+
 .top{
-  width: 100vw;
   grid-area: top;
   
  display: grid;
@@ -158,6 +163,7 @@ li{
 .bottom-description.dark-mode{
   color: var(--very-dark-grayish-blue);
 }
+
 
 
 
