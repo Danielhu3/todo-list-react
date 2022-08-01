@@ -3,7 +3,19 @@ import { ITEM_POST, ITEM_PUT, DONE_PUT, ITEM_DELETE } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import styles from './Input.module.css'
 
+import { useDrag } from 'react-dnd'
+
+
+
 const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setDataRefresh}) => {
+
+  const [{isDragging}, dragRef] = useDrag({
+    type:'CARD',
+    collect: monitor => ({
+      isDragging: monitor.isDragging(),
+    })
+  })
+  
   const [value, setValue] = React.useState(text)
   const [checked, setChecked] = React.useState(done)
 
@@ -87,7 +99,7 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
 
 
   return (
-  <>
+  <div ref={dragRef}>
   
      <input type='checkbox' className={`${styles.checkbox} ${darkMode ? styles.darkMode : ''}`} checked={checked} onChange={setDone}></input>
   
@@ -97,10 +109,12 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
       onKeyDown ={(event) => AddItem ? event.key === 'Enter' ? todoPost(event) : null
       : event.key === 'Enter' ? todoEdit(event) : null}
 
-      className={`${styles.input} ${darkMode ? styles.darkMode : ''} ${checked ? styles.checked : ''}`}>
+      className={`${styles.input} ${darkMode ? styles.darkMode : ''} ${checked ? styles.checked : ''}`}
+      
+      >
     </input> 
     <button className={styles.close} onClick={todoDelete}></button>
-  </>
+  </div>
    
    
      
