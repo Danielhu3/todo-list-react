@@ -4,11 +4,16 @@ import TopPart from './Components/TopPart';
 import React from 'react';
 import useFetch from './Hooks/useFetch';
 import { ALL_GET } from './Api';
+import {DndProvider} from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(false)
   const [data, setData] = React.useState()
   const [dataRefresh, setDataRefresh] = React.useState(false)
+
+
 
 
   const {request} = useFetch()
@@ -38,10 +43,12 @@ function App() {
 
   
   return (
+    <DndProvider backend={HTML5Backend}>
     <div className="App">
       <TopPart darkMode={darkMode} setDarkMode={setDarkMode}/> 
       <BottomPart darkMode={darkMode} data={data} setData={setData} setDataRefresh={setDataRefresh}/>
     </div>
+    </DndProvider>
   );
 }
 

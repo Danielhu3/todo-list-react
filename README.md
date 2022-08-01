@@ -12,6 +12,13 @@ O endpoint que você fará o GET, POST, PUT e DELETE será: http://localhost:500
 Para rodar o servidor, use o comando:
 npm run json-server
 
+# Drag and drop 
+Usar a biblioteca React DND
+
+npm install react-dnd react-dnd-html5-backend
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

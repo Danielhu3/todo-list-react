@@ -1,10 +1,12 @@
 import React from 'react'
 import BottomBar from './BottomBar'
 import Input from './Input'
-
-
 const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
   const [radio, setRadio] = React.useState('all')
+
+
+
+  
   return (
     <>
          <div className={`bottom ${darkMode ? 'dark-mode' : ''}`}>
@@ -12,6 +14,7 @@ const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
             <div className='bottom-list-create'>
               <Input placeholder='Create a new todo...' darkMode={darkMode} AddItem={true} setData={setData} />
             </div>
+            
             <ul className='bottom-list-created'>
               { 
               
@@ -49,12 +52,14 @@ const BottomPart = ({darkMode, data, setData, setDataRefresh}) => {
                 
               
               <BottomBar darkMode={darkMode} data={data} radio={radio} setRadio={setRadio} setDataRefresh={setDataRefresh}/>
-            </ul>  
+            </ul>
+             
           </div>
           <div className={`bottom-description ${darkMode ? 'dark-mode' : ''}`}>Drag and drop to reorder list</div>
       </div>
     </>
   )
+  
 }
 
 export default BottomPart

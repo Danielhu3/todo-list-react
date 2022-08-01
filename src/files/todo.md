@@ -16,9 +16,8 @@
 
 # Criar um componente pra div do BottomBar??? (X)
 
-# Mobile version
+# Mobile version (x)
 
-# fazer um overflow nos items para ter um limite de tamanho
 
 # Drag and drop
 
