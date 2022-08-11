@@ -2,24 +2,21 @@ import React from 'react'
 import { ITEM_POST, ITEM_PUT, DONE_PUT, ITEM_DELETE } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import styles from './Input.module.css'
+import { useDrag, useDrop } from 'react-dnd'
+import Context from './context'
 
-import { useDrag } from 'react-dnd'
 
 
-
-const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setDataRefresh}) => {
-
-  const [{isDragging}, dragRef] = useDrag({
-    type:'CARD',
-    collect: monitor => ({
-      isDragging: monitor.isDragging(),
-    })
-  })
+const Input = ({text, id, index, done, placeholder, darkMode, AddItem, setData, setDataRefresh}) => {
   
   const [value, setValue] = React.useState(text)
   const [checked, setChecked] = React.useState(done)
 
   const {request} = useFetch()
+
+  const ref = React.useRef()
+
+  const {move} = React.useContext(Context)
   
    function todoPost(event){
     async function fetch(){
@@ -95,11 +92,54 @@ const Input = ({text, id, done, placeholder, darkMode, AddItem, setData, setData
   }
 
   
+  const [{isDragging}, dragRef] = useDrag({
+    type:'INPUT',
+    item:{index},
+    collect: monitor => ({
+      isDragging: monitor.isDragging(),
+    })
+  })
 
+  const [, dropRef] = useDrop({
+    accept:'INPUT',
+    hover(item, monitor){
 
+      const draggedIndex = item.index
+      const targetIndex = index
+
+      if(draggedIndex === targetIndex){
+        return
+      }
+
+      const targetSize = ref.current.getBoundingClientRect()
+      const targetCenter = targetSize.height / 2
+     
+      const draggedOffset = monitor.getClientOffset()
+      const draggedTop = draggedOffset.y - targetSize.top
+
+      if(draggedIndex < targetIndex && draggedTop < targetCenter){
+        return
+      }
+
+      if(draggedIndex > targetIndex && draggedTop > targetCenter){
+        return
+      }
+
+      move(draggedIndex, targetIndex)
+
+      // avoid items to flicking
+      item.index = targetIndex
+
+      
+     
+    }
+  })
+
+  // faz com que o ref tenha a referência do drag e do drop
+  dragRef(dropRef(ref))
 
   return (
-  <div ref={dragRef}>
+  <div ref={ref}>
   
      <input type='checkbox' className={`${styles.checkbox} ${darkMode ? styles.darkMode : ''}`} checked={checked} onChange={setDone}></input>
   

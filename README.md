@@ -17,6 +17,10 @@ Usar a biblioteca React DND
 
 npm install react-dnd react-dnd-html5-backend
 
+# Immer
+# Biblioteca usada para trabalhar com estados como se fosse vetores
+npm install immer
+
 
 
 # Getting Started with Create React App
