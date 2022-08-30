@@ -16,7 +16,6 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -79,10 +78,10 @@ npm install immer
 I've got some problems to update the list reactively when a new item is added. I've tried do a new fetch to get all the items from 'db.json' again when a new item is add, but, this was creating a loop, so, i create a state to store the items from list, and, when a new item is add, this will be added to this state, updating reactively.
 
 #### Creating State on App.js
-<img src='./screenshots/app-state.png'>
+<img src='./src/screenshots/app-state.png'>
 
 #### Updating previous state on Input.js
-<img src='./screenshots/input-att-state.png'>
+<img src='./src/screenshots/input-att-state.png'>
 
 ### Continued development
 
