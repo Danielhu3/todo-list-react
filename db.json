@@ -1,18 +1,18 @@
 {
   "list": [
     {
-      "id": 5,
-      "text": "sfs",
-      "done": true
-    },
-    {
       "id": 6,
-      "text": "ddad",
+      "text": "Give this project a star in GitHub",
       "done": false
     },
     {
-      "id": 7,
-      "text": "sdas",
+      "id": 8,
+      "text": "dsd",
+      "done": true
+    },
+    {
+      "id": 9,
+      "text": "Get some rest",
       "done": false
     }
   ]

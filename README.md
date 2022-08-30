@@ -1,95 +1,102 @@
-Sobre a API
-Para emular uma API REST completa (CRUD) no backend, você deverá usar o json-server
+# Frontend Mentor - Todo app solution
 
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- **Bonus**: Drag and drop to reorder items on the list
+
+### Screenshot
+
+<img src='./src/screenshots/desktop.png'>
+
+### Links
+
+- Solution URL: [GitHub](https://github.com/Danielhu3/todo-list-react)
+- Live Site URL: [Click Here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- Css Modules - For styles
+- JSON Server - To emulate a REST API
+- React DND - Library to use Drag and Drop
+- Immer - Library to work with states as if they were arrays
+
+### About the Api
+To emulate an REST API (CRUD), you must use json-server
+
+- Installing
 yarn global add json-server
 
-Se quiser instalar local no projeto e rodar o servidor via npm scripts, fique a vontade
+- Running 
+npm run json-server 
 
-Rodando o json-server na raíz do projeto, ele criará um arquivo db.json
+### React DND
 
-O endpoint que você fará o GET, POST, PUT e DELETE será: http://localhost:5000/clientes
-
-Para rodar o servidor, use o comando:
-npm run json-server
-
-# Drag and drop 
-Usar a biblioteca React DND
-
+- Installing
 npm install react-dnd react-dnd-html5-backend
 
-# Immer
-# Biblioteca usada para trabalhar com estados como se fosse vetores
+### Immer
+- Installing
 npm install immer
 
+### What I learned
+
+I've got some problems to update the list reactively when a new item is added. I've tried do a new fetch to get all the items from 'db.json' again when a new item is add, but, this was creating a loop, so, i create a state to store the items from list, and, when a new item is add, this will be added to this state, updating reactively.
+
+#### Creating State on App.js
+<img src='./screenshots/app-state.png'>
+
+#### Updating previous state on Input.js
+<img src='./screenshots/input-att-state.png'>
+
+### Continued development
+
+currently, the drag and drop feature only work locally and don't change the database, i intend update this to change in the database too.
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Author
 
-## Available Scripts
+- Frontend Mentor - [@Danielhu3](https://www.frontendmentor.io/profile/Danielhu3)
+- Twitter - [@Danielmaggot_](https://www.twitter.com/Danielmaggot_)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

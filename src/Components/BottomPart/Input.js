@@ -92,7 +92,7 @@ const Input = ({text, id, index, done, placeholder, darkMode, AddItem, setData, 
   }
 
   
-  const [{isDragging}, dragRef] = useDrag({
+  const [, dragRef] = useDrag({
     type:'INPUT',
     item:{index},
     collect: monitor => ({
