@@ -58,19 +58,19 @@ Users should be able to:
 ### About the Api
 To emulate an REST API (CRUD), you must use json-server
 
-- Installing
+- Installing:
 yarn global add json-server
 
-- Running 
+- Running:
 npm run json-server 
 
 ### React DND
 
-- Installing
+- Installing:
 npm install react-dnd react-dnd-html5-backend
 
 ### Immer
-- Installing
+- Installing:
 npm install immer
 
 ### What I learned
