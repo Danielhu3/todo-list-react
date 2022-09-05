@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Danielhu3/todo-list-react)
-- Live Site URL: [Click Here](https://your-live-site-url.com)
+
 
 ## My process
 
